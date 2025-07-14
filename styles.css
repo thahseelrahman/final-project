@@ -1,0 +1,294 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #9cf1ee;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background:darkmagenta;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('back.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 64px;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.24);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:rgba(213, 14, 47, 0.849);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.hero-btn {
+  background: #007bff77;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hero-btn:hover {
+  background:rgba(0, 0, 0, 0.523);
+}
+
+/* Courses Section */
+.courses {
+  padding: 4rem 2rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.courses h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,123,255,0.15);
+}
+.course-card h3 {
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+.price {
+  display: block;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #28a745;
+}
+.enroll-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.enroll-btn:hover {
+  background: #0056b3;
+}
+
+/* Instructors Section */
+.instructors {
+  padding: 4rem 2rem 2rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.instructors h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.instructor-profiles {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.instructor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 220px;
+}
+.instructor-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 1rem auto;
+  border: 3px solid #007bff;
+}
+.instructor-card:nth-child(1) .instructor-img {
+  background-image: url('prithvi.webp');
+}
+.instructor-card:nth-child(2) .instructor-img {
+  background-image: url('mahima.jpeg');
+}
+.instructor-card:nth-child(3) .instructor-img {
+  background-image: url('mohanlal.avif');
+}
+.instructor-card:nth-child(4) .instructor-img {
+  background-image: url('mammooty.jpg');
+}
+.instructor-card:nth-child(5) .instructor-img {
+  background-image: url('Asif Ali.avif');
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 2rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.testimonial-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 2rem 1.5rem;
+  width: 320px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.testimonial-card:hover {
+  box-shadow: 0 12px 40px rgba(0,123,255,0.18);
+}
+.testimonial-card span {
+  display: block;
+  margin-top: 1rem;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Newsletter Section */
+.newsletter {
+  padding: 4rem 2rem 2rem 2rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+.newsletter h2 {
+  margin-bottom: 1.5rem;
+}
+#newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#newsletter-form input[type="email"] {
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 220px;
+}
+#newsletter-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+#newsletter-form button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .instructor-profiles, .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+  .instructor-card, .testimonial-card {
+    width: 90vw;
+  }
+  #newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 
